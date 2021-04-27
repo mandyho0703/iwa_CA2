@@ -1,4 +1,5 @@
 const http = require('http'),
+//const axios = require('axios');
 logger = require('morgan'),
 cors = require('cors'),
 express = require('express'),
@@ -22,5 +23,5 @@ const dbURI = process.env.DB_URL;
 
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-        .then((result) => console.log('connected to db'))
+        .then((result) => console.log('connected successfully to db'))
         .catch((err) => console.log(err));
